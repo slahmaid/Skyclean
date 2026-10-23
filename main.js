@@ -18,8 +18,8 @@ b.onclick=()=>set(b.getAttribute('aria-expanded')!=='true');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&w.classList.contains('on')){set(false);b.focus()}});
 document.addEventListener('click',e=>{if(!w.contains(e.target)&&w.classList.contains('on'))set(false)})})();
 // Preloader
-(()=>{const p=document.getElementById('pl');if(!p)return;const t0=performance.now(),MIN=700;
+(()=>{const p=document.getElementById('pl');if(!p)return;p.classList.add('ok');const t0=performance.now(),MIN=700;
 const hide=()=>{const w=Math.max(0,MIN-(performance.now()-t0));setTimeout(()=>p.classList.add('out'),w)};
 if(document.readyState==='complete')hide();else addEventListener('load',hide);
 addEventListener('pageshow',e=>{if(e.persisted)p.classList.add('out')});
-document.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const a=e.target.closest('a[href]');if(!a||a.target==='_blank'||a.hasAttribute('download'))return;const u=new URL(a.href,location.href);if(u.origin!==location.origin||!/\.html?$|\/$/.test(u.pathname))return;if(u.pathname===location.pathname&&u.search===location.search)return;e.preventDefault();p.classList.remove('out');setTimeout(()=>{location.href=u.href},380)});})();
+document.addEventListener('click',e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const a=e.target.closest('a[href]');if(!a||a.target==='_blank'||a.hasAttribute('download'))return;const u=new URL(a.href,location.href);if(u.origin!==location.origin||!/^https?:$/.test(u.protocol))return;if(u.pathname===location.pathname&&u.search===location.search)return;e.preventDefault();p.classList.remove('out');setTimeout(()=>{location.href=u.href},380)});})();
