@@ -202,3 +202,16 @@ body.mo .fab{display:none}
 @media(max-width:600px){.fab{right:14px;bottom:14px}.fabb{min-height:48px;padding:0 18px 0 14px}}
 @media(prefers-reduced-motion:reduce){.fabp,.fabb{transition:none}}
 .tb .ph{overflow:hidden}.tb .ph img{width:100%;height:100%;object-fit:cover;display:block}
+/* ===== Preloader ===== */
+#pl{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;background:#fff;opacity:1;visibility:visible;transition:opacity .35s ease,visibility 0s}
+.pl-on #pl{display:flex}
+#pl.out{opacity:0;visibility:hidden;transition:opacity .5s ease,visibility 0s .5s}
+.pl-in{position:relative;display:flex;align-items:center;justify-content:center;width:260px;height:260px}
+.pl-in img{position:relative;width:180px;height:auto;animation:plp 1.4s cubic-bezier(.45,0,.55,1) infinite}
+.pl-ring{position:absolute;inset:40px;border-radius:50%;background:radial-gradient(circle,rgba(0,191,255,.18),rgba(0,191,255,0) 70%);animation:plr 1.4s cubic-bezier(.45,0,.55,1) infinite}
+.pl-bar{width:120px;height:2px;border-radius:2px;background:#eee;overflow:hidden}.pl-bar i{display:block;width:40%;height:100%;background:#1c1c1c;border-radius:2px;animation:plb 1.1s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes plp{0%,100%{transform:scale(.94);opacity:.75}50%{transform:scale(1.04);opacity:1}}
+@keyframes plr{0%{transform:scale(.6);opacity:0}50%{opacity:1}100%{transform:scale(1.35);opacity:0}}
+@keyframes plb{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
+@media(max-width:860px){.pl-in{width:200px;height:200px}.pl-in img{width:140px}}
+@media(prefers-reduced-motion:reduce){.pl-in img,.pl-ring,.pl-bar i{animation:none}}
