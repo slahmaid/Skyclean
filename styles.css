@@ -140,3 +140,4 @@ nav a[aria-current=page]{font-weight:600;text-decoration:underline;text-underlin
 .ph2{background:#fff3c4;color:#5c4400;border-radius:6px;padding:1px 6px;font-weight:500}
 @media(max-width:860px){.lg{grid-template-columns:1fr;gap:28px}.toc{position:static;padding:18px}.toc a{min-height:44px;display:flex;align-items:center}.phero.lh{height:300px}.phero.lh .hc{bottom:28px}.id{grid-template-columns:1fr;gap:2px}.id dd{margin-bottom:10px}.lc h2{font-size:21px}}
 .toc{display:block;height:auto;margin:0}.toc ol{flex-direction:column}
+.logo img{display:block;height:40px;width:auto}.ft .logo img{height:46px}@media(max-width:860px){.logo img{height:32px}}
