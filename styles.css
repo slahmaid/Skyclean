@@ -161,3 +161,15 @@ nav a[aria-current=page]{text-decoration:none}nav a[aria-current=page]:after{con
 body.mo{overflow:hidden}
 }
 @media(max-width:860px) and (prefers-reduced-motion:reduce){nav ul,nav ul.open,nav ul a,.burger span{transition:none!important}}
+/* ===== Menu desktop ===== */
+@media(min-width:861px){
+nav ul{gap:4px;align-items:center;padding:6px;background:#f2f2f2;border-radius:999px;font-size:14px}
+nav ul a{display:block;padding:10px 18px;border-radius:999px;color:#333;font-weight:500;transition:background .25s,color .25s,box-shadow .25s}
+nav ul a:hover{background:#fff;color:#111;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+nav a[aria-current=page]{text-decoration:none;background:#fff;color:#111;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+nav ul li:last-child{margin-left:6px}
+nav ul li:last-child a{display:inline-flex;align-items:center;gap:8px;background:#1c1c1c;color:#fff;padding:10px 20px}
+nav ul li:last-child a:after{content:"→";transition:transform .25s}
+nav ul li:last-child a:hover{background:#000;color:#fff}nav ul li:last-child a:hover:after{transform:translateX(3px)}
+nav ul li:last-child a[aria-current=page]{background:#1c1c1c;color:#fff}
+}
