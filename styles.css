@@ -173,3 +173,14 @@ nav ul li:last-child a:after{content:"→";transition:transform .25s}
 nav ul li:last-child a:hover{background:#000;color:#fff}nav ul li:last-child a:hover:after{transform:translateX(3px)}
 nav ul li:last-child a[aria-current=page]{background:#1c1c1c;color:#fff}
 }
+/* Services page */
+.svl{display:grid;gap:28px;margin-top:32px}
+.svb{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:center}
+.svb:nth-child(even) .mi{order:2}
+.svb .mi{aspect-ratio:4/3;border-radius:16px;background-size:cover;background-position:center}
+.svb h3{font-size:28px;margin:8px 0 12px}
+.svb p{color:#555;margin:0 0 16px}
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.chk li{position:relative;padding-left:28px}
+.chk li:before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:#1c1c1c url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4.5 8 2.5 2.5 4.5-5' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E") center/12px no-repeat}
+@media(max-width:800px){.svb{grid-template-columns:1fr;gap:18px}.svb:nth-child(even) .mi{order:0}.svb h3{font-size:22px}}
