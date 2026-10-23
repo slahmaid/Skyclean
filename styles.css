@@ -215,3 +215,4 @@ body.mo .fab{display:none}
 @keyframes plb{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
 @media(max-width:860px){.pl-in{width:200px;height:200px}.pl-in img{width:140px}}
 @media(prefers-reduced-motion:reduce){.pl-in img,.pl-ring,.pl-bar i{animation:none}}
+.tb .ph{border-radius:16px!important;overflow:hidden;isolation:isolate;-webkit-mask-image:-webkit-radial-gradient(white,black);transform:translateZ(0)}.tb .ph img{border-radius:16px!important;-webkit-border-radius:16px;clip-path:inset(0 round 16px)}
